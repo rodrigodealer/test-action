@@ -8,7 +8,7 @@ on:
 
 jobs:
   changes:
-    name: 'Terraform'
+    name: 'Test'
     runs-on: ubuntu-latest
 
     defaults:
@@ -22,6 +22,7 @@ jobs:
     - name: Get changed files
       uses: rodrigodealer/last-changed-dir@v1
       with:
+        forbidden: '[]'
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Cat file
