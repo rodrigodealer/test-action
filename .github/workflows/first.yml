@@ -19,11 +19,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Get changed files
+    - name: Get changed dirs
       uses: rodrigodealer/last-changed-dir@v1
       with:
-        forbidden: '[]'
+        forbidden: '[other]'
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Cat file
-      run: cat $HOME/files.json
+      run: cat $HOME/dirs.json
