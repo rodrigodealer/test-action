@@ -22,7 +22,7 @@ jobs:
     - name: Get changed dirs
       uses: rodrigodealer/last-changed-dir@v1
       with:
-        forbidden: '[other]'
+        forbidden: '["other"]'
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Cat file
