@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Get changed dirs
-      uses: rodrigodealer/last-changed-dir@v1
+      uses: rodrigodealer/last-changed-dir@v1.1
       with:
         forbidden: '["other"]'
         token: ${{ secrets.GITHUB_TOKEN }}
